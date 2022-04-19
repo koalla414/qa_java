@@ -16,7 +16,7 @@ public class LionParameterizedTest {
         this.expected = expected;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "{0} является самцом - результат: {1}")
     public static Object[][] hasManeLion() {
         return new Object[][]{
                 {"Самец", true},
@@ -33,5 +33,3 @@ public class LionParameterizedTest {
     }
 
 }
-
-
