@@ -18,19 +18,17 @@ public class LionParameterizedTest {
 
     @Parameterized.Parameters
     public static Object[][] hasManeLion() {
-        return new Object[][] {
+        return new Object[][]{
                 {"Самец", true},
                 {"Самка", false},
         };
     }
+
     @Test
     public void shouldBeKittensValue() throws Exception {
-
         Feline feline = new Feline();
         Lion lion = new Lion(sexLion, feline);
-
         boolean actual = lion.doesHaveMane();
-
         Assert.assertEquals(expected, actual);
     }
 

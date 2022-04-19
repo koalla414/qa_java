@@ -18,13 +18,10 @@ public class CatTest {
 
     @Test
     public void getFoodReturnMenuOfPredator() throws Exception {
-
         Feline feline = new Feline();
         Cat cat = new Cat(feline);
-
         List<String> expectedMenu = feline.eatMeat();
         List<String> actualMenu = cat.getFood();
-
         Assert.assertEquals("Меню определено неверно", expectedMenu, actualMenu);
     }
 
